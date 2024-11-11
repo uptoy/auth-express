@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { registrationSchema, loginSchema, forgotPasswordSchema } from '../../src/validation-schema/auth.schema';
+import { registrationSchema,loginSchema,forgotPasswordSchema } from '../auth.schema'
 
 describe('Validation Schemas', () => {
   describe('registrationSchema', () => {

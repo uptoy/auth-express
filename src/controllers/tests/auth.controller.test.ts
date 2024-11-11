@@ -1,8 +1,8 @@
-import { registration } from '../../src/controllers/auth.controller';
-import { registerUser } from '../../src/services/auth.service';
+import { registration } from '../../../src/controllers/auth.controller';
+import { registerUser } from '../../../src/services/auth.service';
 import { Request, Response } from 'express';
 
-jest.mock('../../src/services/auth.service');
+jest.mock('../../../src/services/auth.service');
 
 describe('Auth Controller - registration', () => {
   let req: Partial<Request>;
