@@ -1,10 +1,10 @@
-import { createUser, findUserByEmail } from '../../src/repository/auth.repository';
-import { connection } from '../../config/db.config';
+import { createUser, findUserByEmail } from '../auth.repository';
+import { connection } from '../../../config/db.config';
 import { QueryResult } from 'pg';
-import { getUserIdByConfirmEmailId } from '../../src/repository/auth.repository';
-import { redis } from '../../config/redis.config';
+import { getUserIdByConfirmEmailId } from '../auth.repository';
+import { redis } from '../../../config/redis.config';
 
-jest.mock('../../config/redis.config');
+jest.mock('../../../config/redis.config.ts');
 
 describe('RedisRepository - getUserIdByConfirmEmailId', () => {
   it('should return a user ID if the ID exists in Redis', async () => {
@@ -41,8 +41,7 @@ describe('RedisRepository - getUserIdByConfirmEmailId', () => {
 
 
 // Jestのモック化
-jest.mock('../../config/db.config');
-
+jest.mock('../../../config/db.config');
 describe('UserRepository - createUser', () => {
   it('should insert a user and return the user details', async () => {
     // モックデータを設定
